@@ -1,9 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import App from './Components/App';
-import firebase from './firebase';
-
-console.log(firebase)
+import App from 'Components/App';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -11,5 +8,3 @@ root.render(
     <App />
   </React.StrictMode>
 );
-
-

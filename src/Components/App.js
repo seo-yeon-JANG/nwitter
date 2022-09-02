@@ -1,11 +1,15 @@
 import '../App.css';
 import React,{useState} from 'react';
-import Router from './Router'
+import Router from 'Components/Router'
+import {authService} from 'fbase'
 
 function App() {
+  console.log(authService.currentUser)
+  const [isLoggedIn,setIsLoggedIn] = useState(authService.currentUser)
   return (
-    <div >
-      <Router/>
+    <div>
+      <Router isLoggedIn={isLoggedIn} />
+      <footer>&copy; Nwitter {new Date().getFullYear()} </footer>
     </div>
   );
 }
